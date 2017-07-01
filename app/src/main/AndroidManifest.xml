@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.luis.pokedex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.luis.pokedex.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.luis.pokedex.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.luis.pokedex.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+        <receiver
+            android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.luis.pokedex" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".Welcome"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bulbasaur"
+            android:label="@string/title_activity_bulbasaur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pikachu"
+            android:label="@string/title_activity_pikachu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Squirtle"
+            android:label="@string/title_activity_squirtle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Charmander"
+            android:label="@string/title_activity_charmander"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Charizard"
+            android:label="@string/title_activity_charizard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ivysaur"
+            android:label="@string/title_activity_ivysaur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Venusaur"
+            android:label="@string/title_activity_venusaur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Charmeleon"
+            android:label="@string/title_activity_charmeleon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Wartortle"
+            android:label="@string/title_activity_wartortle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blastoise"
+            android:label="@string/title_activity_blastoise"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Caterpie"
+            android:label="@string/title_activity_caterpie"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Metapod"
+            android:label="@string/title_activity_metapod"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Butterfree"
+            android:label="@string/title_activity_butterfree"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Weedle"
+            android:label="@string/title_activity_weedle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kakuna"
+            android:label="@string/title_activity_kakuna"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Beedrill"
+            android:label="@string/title_activity_beedrill"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pidgey"
+            android:label="@string/title_activity_pidgey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pidgeotto"
+            android:label="@string/title_activity_pidgeotto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pidgeot"
+            android:label="@string/title_activity_pidgeot"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Rattata"
+            android:label="@string/title_activity_rattata"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Raticate"
+            android:label="@string/title_activity_raticate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Spearow"
+            android:label="@string/title_activity_spearow"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Fearow"
+            android:label="@string/title_activity_fearow"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Raichu"
+            android:label="@string/title_activity_raichu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ekans"
+            android:label="@string/title_activity_ekans"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Arbok"
+            android:label="@string/title_activity_arbok"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Sandshrew"
+            android:label="@string/title_activity_sandshrew"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Sandslash"
+            android:label="@string/title_activity_sandslash"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NidoranF"
+            android:label="@string/title_activity_nidoran_f"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Nidorina"
+            android:label="@string/title_activity_nidorina"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Nidoqueen"
+            android:label="@string/title_activity_nidoqueen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NidoranM"
+            android:label="@string/title_activity_nidoran_m"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Nidorino"
+            android:label="@string/title_activity_nidorino"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Nidoking"
+            android:label="@string/title_activity_nidoking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Clefairy"
+            android:label="@string/title_activity_clefairy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Clefable"
+            android:label="@string/title_activity_clefable"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Vulpix"
+            android:label="@string/title_activity_vulpix"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ninetales"
+            android:label="@string/title_activity_ninetales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Jigglypuff"
+            android:label="@string/title_activity_jigglypuff"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Wigglytuff"
+            android:label="@string/title_activity_wigglytuff"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Zubat"
+            android:label="@string/title_activity_zubat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Golbat"
+            android:label="@string/title_activity_golbat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Oddish"
+            android:label="@string/title_activity_oddish"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gloom"
+            android:label="@string/title_activity_gloom"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Vileplume"
+            android:label="@string/title_activity_vileplume"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Paras"
+            android:label="@string/title_activity_paras"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Parasect"
+            android:label="@string/title_activity_parasect"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Venonat"
+            android:label="@string/title_activity_venonat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Venomoth"
+            android:label="@string/title_activity_venomoth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Diglett"
+            android:label="@string/title_activity_diglett"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dugtrio"
+            android:label="@string/title_activity_dugtrio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Meowth"
+            android:label="@string/title_activity_meowth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Persian"
+            android:label="@string/title_activity_persian"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Psyduck"
+            android:label="@string/title_activity_psyduck"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Golduck"
+            android:label="@string/title_activity_golduck"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mankey"
+            android:label="@string/title_activity_mankey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Primeape"
+            android:label="@string/title_activity_primeape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Growlithe"
+            android:label="@string/title_activity_growlithe"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Arcanine"
+            android:label="@string/title_activity_arcanine"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Poliwag"
+            android:label="@string/title_activity_poliwag"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Poliwhirl"
+            android:label="@string/title_activity_poliwhirl"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Poliwrath"
+            android:label="@string/title_activity_poliwrath"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Abra"
+            android:label="@string/title_activity_abra"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kadabra"
+            android:label="@string/title_activity_kadabra"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Alakazam"
+            android:label="@string/title_activity_alakazam"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Machop"
+            android:label="@string/title_activity_machop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Machoke"
+            android:label="@string/title_activity_machoke"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Machamp"
+            android:label="@string/title_activity_machamp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bellsprout"
+            android:label="@string/title_activity_bellsprout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Weepinbell"
+            android:label="@string/title_activity_weepinbell"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Victreebel"
+            android:label="@string/title_activity_victreebel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tentacool"
+            android:label="@string/title_activity_tentacool"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tentacruel"
+            android:label="@string/title_activity_tentacruel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Geodude"
+            android:label="@string/title_activity_geodude"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Graveler"
+            android:label="@string/title_activity_graveler"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Golem"
+            android:label="@string/title_activity_golem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ponyta"
+            android:label="@string/title_activity_ponyta"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Rapidash"
+            android:label="@string/title_activity_rapidash"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Slowpoke"
+            android:label="@string/title_activity_slowpoke"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Slowbro"
+            android:label="@string/title_activity_slowbro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Magnemite"
+            android:label="@string/title_activity_magnemite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Magneton"
+            android:label="@string/title_activity_magneton"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Farfetchd"
+            android:label="@string/title_activity_farfetchd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Doduo"
+            android:label="@string/title_activity_doduo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dodrio"
+            android:label="@string/title_activity_dodrio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Seel"
+            android:label="@string/title_activity_seel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dewgong"
+            android:label="@string/title_activity_dewgong"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Grimer"
+            android:label="@string/title_activity_grimer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Muk"
+            android:label="@string/title_activity_muk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Shellder"
+            android:label="@string/title_activity_shellder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Cloyster"
+            android:label="@string/title_activity_cloyster"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gastly"
+            android:label="@string/title_activity_gastly"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Haunter"
+            android:label="@string/title_activity_haunter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gengar"
+            android:label="@string/title_activity_gengar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Onix"
+            android:label="@string/title_activity_onix"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Drowzee"
+            android:label="@string/title_activity_drowzee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Hypno"
+            android:label="@string/title_activity_hypno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Krabby"
+            android:label="@string/title_activity_krabby"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kingler"
+            android:label="@string/title_activity_kingler"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Voltorb"
+            android:label="@string/title_activity_voltorb"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Electrode"
+            android:label="@string/title_activity_electrode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Exeggcute"
+            android:label="@string/title_activity_exeggcute"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Exeggutor"
+            android:label="@string/title_activity_exeggutor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Cubone"
+            android:label="@string/title_activity_cubone"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Marowak"
+            android:label="@string/title_activity_marowak"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Hitmonlee"
+            android:label="@string/title_activity_hitmonlee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Hitmonchan"
+            android:label="@string/title_activity_hitmonchan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Lickitung"
+            android:label="@string/title_activity_lickitung"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Koffing"
+            android:label="@string/title_activity_koffing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Weezing"
+            android:label="@string/title_activity_weezing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Rhyhorn"
+            android:label="@string/title_activity_rhyhorn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Rhydon"
+            android:label="@string/title_activity_rhydon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Chansey"
+            android:label="@string/title_activity_chansey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tangela"
+            android:label="@string/title_activity_tangela"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kangaskhan"
+            android:label="@string/title_activity_kangaskhan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Horsea"
+            android:label="@string/title_activity_horsea"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Seadra"
+            android:label="@string/title_activity_seadra"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Goldeen"
+            android:label="@string/title_activity_goldeen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Seaking"
+            android:label="@string/title_activity_seaking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Staryu"
+            android:label="@string/title_activity_staryu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Starmie"
+            android:label="@string/title_activity_starmie"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MrMime"
+            android:label="@string/title_activity_mr_mime"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Scyther"
+            android:label="@string/title_activity_scyther"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Jynx"
+            android:label="@string/title_activity_jynx"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Electabuzz"
+            android:label="@string/title_activity_electabuzz"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Magmar"
+            android:label="@string/title_activity_magmar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pinsir"
+            android:label="@string/title_activity_pinsir"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tauros"
+            android:label="@string/title_activity_tauros"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Magikarp"
+            android:label="@string/title_activity_magikarp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gyarados"
+            android:label="@string/title_activity_gyarados"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Lapras"
+            android:label="@string/title_activity_lapras"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ditto"
+            android:label="@string/title_activity_ditto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Eevee"
+            android:label="@string/title_activity_eevee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Vaporeon"
+            android:label="@string/title_activity_vaporeon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Jolteon"
+            android:label="@string/title_activity_jolteon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Flareon"
+            android:label="@string/title_activity_flareon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Porygon"
+            android:label="@string/title_activity_porygon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Omanyte"
+            android:label="@string/title_activity_omanyte"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Omastar"
+            android:label="@string/title_activity_omastar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kabuto"
+            android:label="@string/title_activity_kabuto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kabutops"
+            android:label="@string/title_activity_kabutops"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Aerodactyl"
+            android:label="@string/title_activity_aerodactyl"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Snorlax"
+            android:label="@string/title_activity_snorlax"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Articuno"
+            android:label="@string/title_activity_articuno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Zapdos"
+            android:label="@string/title_activity_zapdos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Moltres"
+            android:label="@string/title_activity_moltres"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dratini"
+            android:label="@string/title_activity_dratini"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dragonair"
+            android:label="@string/title_activity_dragonair"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dragonite"
+            android:label="@string/title_activity_dragonite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mewtwo"
+            android:label="@string/title_activity_mewtwo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mew"
+            android:label="@string/title_activity_mew"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
